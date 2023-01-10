@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+    <meta charset="utf-8">
+    <meta name="vieport" content="width=device-width,intial-scale=1">
+    <title>ANTIVIRAL DRUG DB</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="search.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <section class="abt-header">
+            <nav>
+                <a href="home.html"><img src="image/CLRI.png"></a>
+                <div class="nav-links" id="navlinks">
+                    
+                     <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="contact.html">CONTACT</a></li> 
+                        <li><a href="search.html">SEARCH</a></li>               
+                     </ul>
+                </div>
+            </nav>
+            <h1>Search</h1>
+        </section>
+        
+        <!--search-->
+        <section>
+            <div class="hero">
+                <div class="btn-box">
+                    <button id="btn1" onclick="openNAME()">Search by name</button>
+                    <button id="btn2" onclick="openTNAME()">Search by target protein</button>
+                    <button id="btn3" onclick="openSCORE()">Search by docking score</button>
+                </div>
+                <div id="content1" class="content">
+                     <div class="container">
+                        <form >
+                            <input type="text" placeholder="Antiviral name">
+                            <button type="submit">search</button>
+                        </form>
+                     </div>
+                </div>
+                <div id="content2" class="content">
+                        <div class="container">
+                            <form >
+                             <input type="text" placeholder="Target protein name">
+                             <button type="submit">search</button>
+                            </form>
+                        </div>
+                </div>
+                <div id="content3" class="content">
+                        <div class="container">
+                            <form >
+                             <input type="text" placeholder="Docking score">
+                             <button type="submit">search</button>
+                            </form>
+                        </div>
+                </div>
+            </div>
+            <script>
+                var content1 = document.getElementById("content1");
+                var content2 = document.getElementById("content2");
+                var content3 = document.getElementById("content3");
+                var btn1 = document.getElementById("btn1");
+                var btn2 = document.getElementById("btn2");
+                var btn3 = document.getElementById("btn3");
+
+                function openNAME(){
+                    content1.style.transform="translatex(0)";
+                    content2.style.transform="translatex(500%)";
+                    content3.style.transform="translatex(500%)";
+                    btn1.style.color="#f44336";
+                    btn2.style.color="#000";
+                    btn3.style.color="#000";
+                }
+                function openTNAME(){
+                    content1.style.transform="translatex(500%)";
+                    content2.style.transform="translatex(0)";
+                    content3.style.transform="translatex(500%)";
+                    btn2.style.color="#f44336";
+                    btn1.style.color="#000";
+                    btn3.style.color="#000";
+                }
+                function openSCORE(){
+                    content1.style.transform="translatex(500%)";
+                    content2.style.transform="translatex(500%)";
+                    content3.style.transform="translatex(0)";
+                    btn3.style.color="#f44336";
+                    btn1.style.color="#000";
+                    btn2.style.color="#000";
+                }
+            </script> 
+        </section>
+        
+        <!----Footer------>
+
+        <section class="footer">
+            <h4>DATABASE NAME</h4>
+            <p>Developed @ CSIR-CLRI, Dept.of.High computing</p>
+        </section>
+    </body>
+</html>
+
